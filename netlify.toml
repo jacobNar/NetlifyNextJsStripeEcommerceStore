@@ -1,6 +1,7 @@
 [build]
   command = "npm run build"
   publish = ".next"
+  stripeKey = 'sk_test_51IBM5BG706NbNZFJr7DkgX29qbISXqmFwxy87iXlMTsiWYr9dV9uthUQtRu85bE24OmAbPai61jlyrMSAspr5jSe00A085PNN9'
 
   [build.environment]
     # set TERM variable for terminal output

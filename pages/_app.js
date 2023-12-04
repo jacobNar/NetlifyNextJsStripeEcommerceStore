@@ -1,9 +1,28 @@
 import '../styles/globals.css';
+import { ConfigProvider } from 'antd';
+import ShoppingCartProvider from '../components/contexts/ShoppingCartProvider'
+
+
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Component {...pageProps} />
+    <ShoppingCartProvider>  
+    <ConfigProvider
+      theme={{
+        token: {
+          // Seed Token
+          colorPrimary: '#455a45',
+          borderRadius: 2,
+
+          // Alias Token
+          colorBgContainer: '#fff',
+        },
+      }}>
+        <Component {...pageProps} />
+      </ConfigProvider>
+      </ShoppingCartProvider>
+      
     </>
   );
 }

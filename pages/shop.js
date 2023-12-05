@@ -4,7 +4,8 @@ import Header from '../components/Header';
 
 export async function getStaticProps() {
     // Fetch data for the dynamic route using the params object
-    var baseUrl = 'http://localhost:8888'; //window.location.hostname === "localhost" ? 'http://localhost:8888'
+    // var baseUrl = 'http://localhost:8888';
+    var baseUrl = 'https://ecomtemplate1.netlify.app'
     const products = await fetch(`${baseUrl}/.netlify/functions/getProducts`)
     const prices = await fetch(`${baseUrl}/.netlify/functions/getPrices`);
 

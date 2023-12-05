@@ -13,7 +13,8 @@ export default function App() {
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-    var baseUrl = 'http://localhost:8888';
+    var baseUrl = window.location.host;
+    console.log(baseUrl)
     fetch(`${baseUrl}/.netlify/functions/createPaymentIntent`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

@@ -1,5 +1,5 @@
 import {React, useEffect} from 'react'
-const netlifyIdentity = require('netlify-identity-widget')
+import netlifyIdentity from 'netlify-identity-widget'
 
 export default function Login() {
 

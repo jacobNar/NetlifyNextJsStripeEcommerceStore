@@ -7,24 +7,24 @@ body{
     margin: auto;
   }
 
-  .header {
-    border: none;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    padding:  1% 5% !important;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    padding: 15px 0;
-    font-size: 1.5em;
-  }
+.header {
+  border: none;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding:  1% 5% !important;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 20px !important;
+  font-size: 1.5em;
+}
 
-  .header-alt{ 
-    background: rgb(69, 90, 69);
-  }
-  
+.header-alt{ 
+  background: rgb(69, 90, 69);
+}
+
 .header div {
-    flex-basis: 33%;
+    flex-basis: 25%;
     align-self: center;
   }
 
@@ -33,30 +33,34 @@ body{
 }
   
   
-  .header div:nth-child(1){
-    flex-basis: 25%;
-  }
-  
-  .header div:nth-child(3) {
-    text-align: center;
-  
-  }
-  
-  .header div:nth-child(4) {
-    text-align: right;  
-    flex-basis: 25%;
-  }
-  
-  .show-mobile {
-    display: none;
-  }
-  
-  .header a{
-    text-decoration: none;
-    color: white;
-    margin: 0 10px;
-    font-size: 1em;
-  }
+.header div:nth-child(1){
+  flex-basis: 25%;
+}
+
+.header div:nth-child(3) {
+  text-align: center;
+
+}
+
+.header div:nth-child(4) {
+  text-align: right;  
+  flex-basis: 25%;
+}
+
+.show-mobile {
+  display: none;
+}
+
+.hide-mobile {
+  flex-basis: 50% !important;
+}
+
+.header a{
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  font-size: 1em;
+}
 
 
 /******** SHOP PAGE ********/

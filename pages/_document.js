@@ -1,11 +1,13 @@
 import React from 'react';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript, Script } from 'next/document';
 
 class MyDocument extends Document {
   render() {
     return (
       <Html lang="en" >
-        <Head />
+        <Head >
+          <NextScript src="https://identity.netlify.com/v1/netlify-identity-widget.js"/>
+        </Head>
         <body>
           <Main />
           <NextScript />

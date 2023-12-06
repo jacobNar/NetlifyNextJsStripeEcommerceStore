@@ -7,11 +7,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en" >
         <Head >
-        <script
-      type="text/javascript"
-      src="https://identity.netlify.com/v1/netlify-identity-widget.js"
-    ></script>
-          {/* <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"/> */}
         </Head>
         <body>
           <Main />

@@ -1,6 +1,6 @@
 import {React, useEffect} from 'react'
 import GoTrue from 'gotrue-js';
-import { Button, Checkbox, Form, Input } from 'antd';
+import { Button, Checkbox, Form, Input, Modal } from 'antd';
 
 const auth = new GoTrue({
   APIUrl: 'https://ecomtemplate1.netlify.app/.netlify/identity',
@@ -29,20 +29,10 @@ export default function Signup() {
 
   return (
     <>
+    <Modal open={true} closable={false} title="Signup" footer={false} className='auth-form'>
+
     <Form
-    name="basic"
-    labelCol={{
-      span: 8,
-    }}
-    wrapperCol={{
-      span: 16,
-    }}
-    style={{
-      maxWidth: 600,
-    }}
-    initialValues={{
-      remember: true,
-    }}
+    name="signup"
     onFinish={onFinish}
     onFinishFailed={onFinishFailed}
     autoComplete="off"
@@ -77,24 +67,17 @@ export default function Signup() {
       name="remember"
       valuePropName="checked"
       wrapperCol={{
-        offset: 8,
+        offset: 4,
         span: 16,
       }}
     >
       <Checkbox>Remember me</Checkbox>
-    </Form.Item>
-
-    <Form.Item
-      wrapperCol={{
-        offset: 8,
-        span: 16,
-      }}
-    >
       <Button type="primary" htmlType="submit">
         Submit
       </Button>
     </Form.Item>
   </Form>
+  </Modal>
     </>
   )
 }

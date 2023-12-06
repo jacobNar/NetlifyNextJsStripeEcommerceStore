@@ -1,4 +1,4 @@
-import {React, useEffect} from 'react'
+import {React, useEffect, useState} from 'react'
 import GoTrue from 'gotrue-js';
 import { Button, Checkbox, Form, Input, Modal } from 'antd';
 
@@ -9,10 +9,11 @@ const auth = new GoTrue({
 });
 
 export default function Signup() {
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(()=> {
-    // auth.signup('jakenbakenar@aol.com' , 'testP@ss');
     
+    setIsLoaded(true)
   },[])
 
   const onFinish = (values) => {
@@ -29,7 +30,7 @@ export default function Signup() {
 
   return (
     <>
-    <Modal open={true} closable={false} title="Signup" footer={false} className='auth-form'>
+    <Modal open={isLoaded} closable={false} title="Signup" footer={false} className='auth-form'>
 
     <Form
     name="signup"

@@ -1,4 +1,4 @@
-import {React, useEffect} from 'react'
+import {React, useEffect, useState} from 'react'
 import GoTrue from 'gotrue-js';
 import { Button, Checkbox, Form, Input, Modal } from 'antd';
 
@@ -9,11 +9,12 @@ const auth = new GoTrue({
 });
 
 export default function Login() {
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(()=> {
-    // auth.signup('jakenbakenar@aol.com' , 'testP@ss');
-    
-  },[])
+    setIsLoaded(true)
+  }, [])
+
 
   const onFinish = (values) => {
     console.log('Success:', values);
@@ -30,8 +31,7 @@ export default function Login() {
   };
 
   return (
-    <>
-    <Modal open={true} closable={false} title="Login" footer={false} className='auth-form'>
+    <Modal title="Login" open={isLoaded} closable={false} footer={false} className='auth-form'>
 
 
       <Form
@@ -39,6 +39,10 @@ export default function Login() {
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
       autoComplete="off"
+      initialValues={{ remember: true }}
+      labelCol={{ span: 8 }}
+      wrapperCol={{ span: 16 }}
+      style={{ maxWidth: 600 }}
     >
       <Form.Item
         label="Username"
@@ -74,12 +78,14 @@ export default function Login() {
           span: 16,
         }}
       >
+        <div>
         <Checkbox>Remember me</Checkbox><Button type="primary" htmlType="submit">
           Submit
         </Button>
+        </div>
+        
       </Form.Item>
     </Form>
   </Modal>
-    </>
   )
 }

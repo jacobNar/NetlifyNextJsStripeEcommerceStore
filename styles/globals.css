@@ -83,8 +83,8 @@ body{
 
 
 .auth-form {
-  top: 50%;
-  transform: translateY(-50%);
+  top: 35%;
+  /* transform: translateY(-50%); */
   margin: 0 auto;
 }
 
